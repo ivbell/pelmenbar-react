@@ -1,0 +1,33 @@
+@import "/src/assets/style/conf";
+
+.first-mobile-menu {
+  display: none;
+  border-bottom: 1px solid $line;
+  background-color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .first-mobile-menu {
+    display: block;
+  }
+}
+
+.mobile-logo-menu-top {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  background-color: #fff;
+
+  img {
+    width: 100px;
+  }
+}
+
+.contact-block {
+  padding-left: $gutter/2;
+  padding-right: 5px;
+  @media (max-width: 1000px) {
+    padding-top: 25px;
+    padding-right: 5px;
+  }
+}

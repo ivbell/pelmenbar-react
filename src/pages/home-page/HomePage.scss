@@ -1,0 +1,9 @@
+@import "./src/assets/style/conf";
+
+.home-page{
+  margin-top: $gutter/2;
+  img{
+    width: 100%;
+    border-radius: 12px;
+  }
+}

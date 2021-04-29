@@ -1,0 +1,32 @@
+@import './src/assets/style/conf';
+
+.footer-block {
+  padding-bottom: $gutter;
+  text-align: center;
+
+  a {
+    margin-right: 10px;
+    transition: $transition;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover{
+      svg{
+        fill: $accent;
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .razr{
+    display: none;
+  }
+
+  @media (max-width: 1000px) {
+    margin-bottom: 50px;
+  }
+}

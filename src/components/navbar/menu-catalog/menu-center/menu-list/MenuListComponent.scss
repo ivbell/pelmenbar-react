@@ -1,0 +1,17 @@
+@import "/src/assets/style/conf";
+
+.catalog-block {
+  li {
+    padding: 1em;
+
+    a {
+      border-bottom: 1px solid $textcolor;
+      transition: 0.2s;
+
+      &:hover {
+        color: $accent;
+        border: none;
+      }
+    }
+  }
+}

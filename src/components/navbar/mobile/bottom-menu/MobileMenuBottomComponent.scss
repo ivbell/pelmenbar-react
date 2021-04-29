@@ -1,0 +1,91 @@
+@import "/src/assets/style/conf";
+
+.bottom-menu-mobile {
+  display: none;
+  background-color: #fff;
+  box-shadow: 0 -2px 0 0 rgba(216, 216, 216, .2);
+  z-index: 1000;
+
+  @media (max-width: 1000px) {
+    display: block;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 52px;
+  }
+
+  .list-burger {
+    padding-top: 13px;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  .list-cart {
+    padding-top: 15px;
+    padding-right: 25px;
+    position: relative;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    span {
+      position: absolute;
+      padding: 8px 10px;
+      line-height: 1;
+      font-weight: bold;
+      color: #fff;
+      background-color: $accent;
+      border-radius: 100%;
+      left: 3px;
+      bottom: 20px;
+    }
+  }
+}
+
+.m-city-block {
+  border-top: 1px solid $line;
+  background-color: $gray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+
+  .sm-text {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-decoration: underline;
+  }
+}
+
+.full-catalog-block {
+  display: none;
+
+  @media (max-width: 1000px) {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+  }
+
+  &-close {
+    position: absolute;
+    right: 15px;
+    top: 18px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

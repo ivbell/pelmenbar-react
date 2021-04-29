@@ -1,0 +1,11 @@
+@import "./src/assets/style/conf";
+
+
+.catalog-menu {
+  border-top: 1px solid $line;
+  background-color: #fff;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}

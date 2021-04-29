@@ -1,12 +1,16 @@
 import React from 'react'
-import MenuTopComponent from '../navbar/MenuTopComponent'
-import MenuCenterComponent from '../navbar/MenuCenterComponent'
+import MenuCatalogComponent from '../../navbar/menu-catalog/MenuCatalogComponent'
+import MenuTopComponent from '../../navbar/menu-top/MenuTopComponent'
+import { MobileMenuBottomComponent } from '../../navbar/mobile/bottom-menu/MobileMenuBottomComponent'
+import MobileFirstMenu from '../../navbar/mobile/first-menu/MobileFirstMenu'
 
 const Navbar = () => {
   return (
     <div>
-      <MenuTopComponent />
-      <MenuCenterComponent />
+      <MobileFirstMenu/>
+      <MenuTopComponent/>
+      <MenuCatalogComponent/>
+      <MobileMenuBottomComponent/>
     </div>
   )
 }

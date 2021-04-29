@@ -1,11 +1,17 @@
 import React from 'react'
+import './MenuCatalogComponent.scss'
+import MenuListComponent from './menu-center/menu-list/MenuListComponent'
+import MenuCartComponent from './menu-center/menu-cart/MenuCartComponent'
 
-const MenuCenterComponent = () => {
+const MenuCatalogComponent = () => {
   return (
-    <div>
-      <h1>MenuCent</h1>
+    <div className="catalog-menu">
+      <div className="container d-flex jc-sb">
+        <MenuListComponent/>
+        <MenuCartComponent/>
+      </div>
     </div>
   )
 }
 
-export default MenuCenterComponent
+export default MenuCatalogComponent

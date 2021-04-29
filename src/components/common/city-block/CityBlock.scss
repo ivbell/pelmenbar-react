@@ -1,0 +1,35 @@
+@import "./src/assets/style/conf";
+
+
+.city-block {
+  align-items: center;
+  align-content: center;
+  position: relative;
+  padding-right: 120px;
+
+  svg {
+    width: 24px;
+    color: $accent;
+  }
+
+  span {
+    border-bottom: 1px dashed $textcolor;
+    position: absolute;
+    top: 0;
+    @media (max-width: 1000px) {
+      position: relative;
+    }
+
+    &:hover {
+      border-bottom: 1px $accent;
+      color: $accent;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 30px;
+    svg {
+      display: none;
+    }
+  }
+}
