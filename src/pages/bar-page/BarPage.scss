@@ -1,0 +1,46 @@
+.bar-page {
+  font-weight: bold;
+  margin-bottom: 30px;
+  @media (max-width: 1000px) {
+    background-color: #fff;
+    padding: 5px 0;
+  }
+}
+.menu {
+  padding: 15px 0;
+
+  h2 {
+    padding-left: 15px;
+  }
+}
+.slick-slide img{
+  width: 100%;
+  border-radius: 12px;
+}
+.menu-box {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 500px) {
+    display: block;
+  }
+}
+
+.bar-list {
+  padding-bottom: 15px;
+
+  .list-item {
+    font-weight: bold;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 600px) {
+    background-color: #fff;
+    padding-top: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+}

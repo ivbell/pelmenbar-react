@@ -5,14 +5,14 @@ import { MobileMenuBottomComponent } from '../../navbar/mobile/bottom-menu/Mobil
 import MobileFirstMenu from '../../navbar/mobile/first-menu/MobileFirstMenu'
 
 const Navbar = () => {
-  return (
-    <div>
-      <MobileFirstMenu/>
-      <MenuTopComponent/>
-      <MenuCatalogComponent/>
-      <MobileMenuBottomComponent/>
-    </div>
-  )
+	return (
+		<div>
+			<MobileFirstMenu />
+			<MenuTopComponent />
+			<MenuCatalogComponent />
+			<MobileMenuBottomComponent />
+		</div>
+	)
 }
 
 export default Navbar

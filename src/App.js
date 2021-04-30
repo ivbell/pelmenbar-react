@@ -4,16 +4,16 @@ import './App.scss'
 import Navbar from './components/common/navbar/Navbar'
 import Footer from './components/common/footer/Footer'
 
-function App () {
+function App() {
   const routes = useRoutes()
   document.title = 'Pelmen Bar | by Andrew'
   return (
     <Router>
-      <Navbar />
+      <Navbar/>
       <div className="App">
         { routes }
       </div>
-      <Footer />
+      <Footer/>
     </Router>
   )
 }

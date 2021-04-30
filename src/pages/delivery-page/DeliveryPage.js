@@ -1,11 +1,18 @@
 import React from 'react'
 
 const DeliveryPage = () => {
-	return (
-		<div>
-			<h1>delivery page</h1>
-		</div>
-	)
+  return (
+    <div>
+      <div className="container">
+        <div className="delivery">
+          <h1>Доставка</h1>
+          <p>Бесплатная доставка от 500р в пределах екатеринбурга</p>
+          <p>Оплата при получении заказа, наличным или безналичным расчётом</p>
+          <p>Заказать доставку можно с 10:00 до 20:00</p>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default DeliveryPage

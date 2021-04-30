@@ -1,16 +1,21 @@
 import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined'
-import React from 'react'
+import { observer } from 'mobx-react-lite'
 import { NavLink } from 'react-router-dom'
+import Contacts from '../../../../../store/contacts'
 import MenuHandler from '../../../../../store/MenuHandler'
 import { CityBlock } from '../../../../common/city-block/CityBlock'
 import './MobileHandleMenu.scss'
 
-export const MobileHandleMenu = () => {
+export const MobileHandleMenu = observer(() => {
 	const toggleMenu = (event) => {
 		if (event.target instanceof HTMLAnchorElement) {
 			MenuHandler.toggleMenu()
 		}
 	}
+
+	const addressList = Contacts.address.map((item) => (
+		<div key={item.toString()} className='sm-text'>- {item}</div>
+	))
 
 	return (
 		<div className='full-catalog-block'>
@@ -27,8 +32,7 @@ export const MobileHandleMenu = () => {
 
 			<div className='m-city-block'>
 				<CityBlock />
-				<div className='sm-text'>- пр. Ленина 5б, цокольный этаж, ТЦ S&T</div>
-				<div className='sm-text'>- Экомол «Гранат», Амундсена 63</div>
+				{addressList}
 			</div>
 
 			<div onClick={toggleMenu} className='menu-list-handler'>
@@ -55,4 +59,4 @@ export const MobileHandleMenu = () => {
 			</div>
 		</div>
 	)
-}
+})

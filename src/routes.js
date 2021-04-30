@@ -4,9 +4,10 @@ import HomePage from './pages/home-page/HomePage'
 import CatalogPage from './pages/catalog-page/CatalogPage'
 import DeliveryPage from './pages/delivery-page/DeliveryPage'
 import AboutPage from './pages/about-page/AboutPage'
-import ContactsPage from './pages/contacts-page/ContactsPage'
+import { ContactsPage } from './pages/contacts-page/ContactsPage'
 import CartPage from './pages/cart-page/CartPage'
 import ErrorPage from './pages/404/ErrorPage'
+import { BarPage } from './pages/bar-page/BarPage'
 
 export const useRoutes = () => {
   return (
@@ -28,6 +29,9 @@ export const useRoutes = () => {
       </Route>
       <Route path="/cart" exact>
         <CartPage/>
+      </Route>
+      <Route path="/bar" exact>
+        <BarPage/>
       </Route>
 
       <Route path="/error" exact>
