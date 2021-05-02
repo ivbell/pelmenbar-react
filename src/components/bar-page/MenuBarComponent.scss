@@ -1,0 +1,49 @@
+@import "/src/assets/style/conf";
+
+.menu-bar-list {
+  margin-right: 15px;
+  margin-left: 15px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid $line;
+    transition: $transition;
+  }
+
+  .images-block {
+    position: relative;
+    transition: $transition;
+
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+
+      img {
+        box-shadow: $shadow-hover;
+      }
+    }
+  }
+
+  .loop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -65px;
+    margin-left: -65px;
+
+    svg {
+      color: #4e4e4e;
+      font-size: 7.5rem;
+      opacity: .2;
+      transition: $transition;
+    }
+  }
+}
+
+
+
+
+

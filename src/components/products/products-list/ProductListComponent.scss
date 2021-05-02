@@ -1,0 +1,9 @@
+.product-list {
+  margin: 1em auto;
+  max-width: 1140px;
+  justify-content: center;
+
+  @media (max-width: 575px) {
+    justify-content: space-between;
+  }
+}

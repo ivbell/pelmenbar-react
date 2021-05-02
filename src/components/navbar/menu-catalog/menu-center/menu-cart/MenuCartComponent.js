@@ -1,24 +1,16 @@
 import React from 'react'
 import './MenuCartComponent.scss'
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined'
+import { observer } from 'mobx-react-lite'
+import { CartComponentMenu } from '../../../../common/cart-count/CartComponentMenu'
+import products from '../../../../../store/products'
 
-const MenuCartComponent = () => {
+const MenuCartComponent = observer(() => {
+  const cartCount = products.cart.length
   return (
     <div>
-      <div className="cart-block">
-        <div
-          className="cart-block-icon"
-        >
-          <ShoppingCartOutlinedIcon/>
-        </div>
-        {/*<div*/}
-        {/*  className="cart-block-full"*/}
-        {/*>*/}
-        {/*  <ShoppingCartOutlinedIcon/>*/}
-        {/*</div>*/}
-      </div>
+      <CartComponentMenu count={ cartCount }/>
     </div>
   )
-}
+})
 
 export default MenuCartComponent

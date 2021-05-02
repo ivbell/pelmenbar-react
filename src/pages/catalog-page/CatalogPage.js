@@ -1,11 +1,14 @@
 import React from 'react'
+import './CatalogPage.scss'
+import { ProductListComponent } from '../../components/products/products-list/ProductListComponent'
+import products from '../../store/products'
+import { observer } from 'mobx-react-lite'
 
-const CatalogPage = () => {
+export const CatalogPage = observer(() => {
+  const productsList = products.products
   return (
-    <div>
-      <h1>Catalog page</h1>
+    <div className="container">
+      <ProductListComponent title="Каталог" products={ productsList }/>
     </div>
   )
-}
-
-export default CatalogPage
+})

@@ -1,18 +1,22 @@
 import React from 'react'
 import './MenuListComponent.scss'
 import { NavLink } from 'react-router-dom'
+import products from '../../../../../store/products'
+import { observer } from 'mobx-react-lite'
 
-const MenuListComponent = () => {
+export const MenuListComponent = observer(() => {
+
+  const menuList = products.categories.map((item) =>
+    <li key={ item._id }>
+      <NavLink to={ '/catalog/' + item.name }>{ item.name }</NavLink>
+    </li>,
+  )
+
   return (
     <div>
       <div className="catalog-block">
         <ul className="d-flex">
-          <li>
-            <NavLink to="/catalog">Пельмени</NavLink>
-          </li>
-          <li>
-            <NavLink to="/catalog">Вареники</NavLink>
-          </li>
+          { menuList }
           <li>
             <NavLink to="/bar">Бар</NavLink>
           </li>
@@ -20,6 +24,4 @@ const MenuListComponent = () => {
       </div>
     </div>
   )
-}
-
-export default MenuListComponent
+})

@@ -5,24 +5,28 @@ import { NavLink } from 'react-router-dom'
 import MenuHandler from '../../../../store/MenuHandler'
 import { MobileHandleMenu } from './mobile-handle-menu/MobileHandleMenu'
 import './MobileMenuBottomComponent.scss'
+import products from '../../../../store/products'
+import { CartCountComponent } from '../../../common/cart-count/CartCountComponent'
 
 export const MobileMenuBottomComponent = observer(() => {
-	return (
-		<div className='bottom-menu-mobile'>
-			<ul className='d-flex jc-sb'>
-				<li onClick={() => MenuHandler.toggleMenu()} className='list-burger'>
-					<MenuIcon />
-				</li>
+  const countProduct = products.cart.length
 
-				<li className='list-cart'>
-					<NavLink to='/cart'>
-						<ShoppingCartOutlinedIcon />
-						<span>1</span>
-					</NavLink>
-				</li>
-			</ul>
+  return (
+    <div className="bottom-menu-mobile">
+      <ul className="d-flex jc-sb">
+        <li onClick={ () => MenuHandler.toggleMenu() } className="list-burger">
+          <MenuIcon/>
+        </li>
 
-			{MenuHandler.isShow && <MobileHandleMenu />}
-		</div>
-	)
+        <li className="list-cart">
+          <NavLink to="/cart">
+            <ShoppingCartOutlinedIcon/>
+            <CartCountComponent count={ countProduct }/>
+          </NavLink>
+        </li>
+      </ul>
+
+      { MenuHandler.isShow && <MobileHandleMenu/> }
+    </div>
+  )
 })

@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick.scss'
 import 'slick-carousel/slick/slick-theme.scss'
 import Slider from 'react-slick'
 import './BarPage.scss'
+import { MenuBarComponent } from '../../components/bar-page/MenuBarComponent'
 
 export const BarPage = () => {
   const settings = {
@@ -14,6 +15,18 @@ export const BarPage = () => {
     slidesToScroll: 1,
     lazyLoad: BarPage,
   }
+
+  const menuItem = [
+    { src: '/images/bar/menu/1.jpg', title: 'Основное меню' },
+    { src: '/images/bar/menu/2.jpg', title: 'Меню категорий' },
+    { src: '/images/bar/menu/2.jpg', title: 'Меню пельменей' },
+  ]
+
+  const listMenu = menuItem.map(item =>
+    <div key={ item.title.toString() } className="menu-bar-list">
+      <MenuBarComponent item={ item }/>
+    </div>,
+  )
   return (
     <div className="container">
       <div className="bar-page">
@@ -40,7 +53,7 @@ export const BarPage = () => {
       <div className="menu">
         <h2>Меню:</h2>
         <div className="menu-box">
-          <h2>Меню бара</h2>
+          { listMenu }
         </div>
       </div>
       <div className="bar-list">

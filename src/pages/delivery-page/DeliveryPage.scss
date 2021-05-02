@@ -1,0 +1,15 @@
+.delivery{
+  height: 80vh;
+  p {
+    font-weight: bold;
+  }
+
+  @media (max-width: 1000px) {
+    background-color: #fff;
+    padding: 10px 0;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    height: 100%;
+    border-radius: 15px;
+  }
+}

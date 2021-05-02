@@ -1,6 +1,6 @@
 import React from 'react'
 import './MenuCatalogComponent.scss'
-import MenuListComponent from './menu-center/menu-list/MenuListComponent'
+import { MenuListComponent } from './menu-center/menu-list/MenuListComponent'
 import MenuCartComponent from './menu-center/menu-cart/MenuCartComponent'
 
 const MenuCatalogComponent = () => {
