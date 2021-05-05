@@ -5,6 +5,7 @@ class Products {
   products = []
   categories = []
   cart = []
+  paymentCart = []
 
   constructor() {
     makeAutoObservable(this)
@@ -69,6 +70,11 @@ class Products {
     if (product.qtx === 0) {
       cart.splice(cart.indexOf(product), 1)
     }
+  }
+
+  resetCart() {
+    this.paymentCart = this.cart
+    this.cart = []
   }
 
 }

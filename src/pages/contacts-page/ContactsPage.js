@@ -5,7 +5,7 @@ import './ContactsPage.scss'
 
 export const ContactsPage = () => {
 	const addressList = contacts.address.map((item) => (
-		<span key={item.toString()}>- {item}</span>
+		<span key={item.toString()}>{'-' + item}</span>
 	))
 
 	const email = contacts.email

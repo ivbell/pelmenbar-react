@@ -5,7 +5,6 @@ import Navbar from './components/common/navbar/Navbar'
 import Footer from './components/common/footer/Footer'
 import { useEffect } from 'react'
 import products from './store/products'
-import { BackgroundImage } from './components/common/bacground-image/BackgroundImage'
 
 function App() {
   useEffect(() => {
@@ -22,7 +21,6 @@ function App() {
         </div>
         <Footer/>
       </div>
-      <BackgroundImage/>
     </Router>
   )
 }
