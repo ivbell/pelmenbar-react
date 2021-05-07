@@ -2,6 +2,7 @@ import React from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
 import ErrorPage from './pages/404/ErrorPage'
 import AboutPage from './pages/about-page/AboutPage'
+import { BarMenuPage } from './pages/bar-menu-page/BarMenuPage'
 import { BarPage } from './pages/bar-page/BarPage'
 import { CartPage } from './pages/cart-page/CartPage'
 import { CatalogPage } from './pages/catalog-page/CatalogPage'
@@ -10,6 +11,7 @@ import { ContactsPage } from './pages/contacts-page/ContactsPage'
 import DeliveryPage from './pages/delivery-page/DeliveryPage'
 import { GetPelmenbarPage } from './pages/get-pelmenbar-page/GetPelmenbarPage'
 import { HomePage } from './pages/home-page/HomePage'
+import { MenuPBPage } from './pages/menu-PB-page/MenuPBPage';
 
 export const useRoutes = () => {
 	return (
@@ -17,12 +19,14 @@ export const useRoutes = () => {
 			<Route path='/' exact>
 				<HomePage />
 			</Route>
+
 			<Route path='/catalog' exact>
 				<CatalogPage />
 			</Route>
 			<Route path='/catalog/:name'>
 				<CategoryPage />
 			</Route>
+
 			<Route path='/delivery' exact>
 				<DeliveryPage />
 			</Route>
@@ -35,8 +39,15 @@ export const useRoutes = () => {
 			<Route path='/cart' exact>
 				<CartPage />
 			</Route>
+
 			<Route path='/bar' exact>
 				<BarPage />
+			</Route>
+			<Route path='/menu' exact>
+				<BarMenuPage />
+			</Route>
+			<Route path='/menu/:name' exact>
+				<MenuPBPage />
 			</Route>
 
 			<Route path='/error' exact>

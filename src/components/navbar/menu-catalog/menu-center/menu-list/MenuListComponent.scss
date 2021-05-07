@@ -1,6 +1,11 @@
 @import "/src/assets/style/conf";
 
-.catalog-block {
+.menu-list-component {
+  background-color: #fff;
+  border-top: 1px solid $line;
+  position: relative;
+  z-index: 23;
+  box-shadow: $shadow;
   li {
     padding: 1em;
 
@@ -12,6 +17,16 @@
         color: $accent;
         border: none;
       }
+
+      &.active{
+        color: $accent;
+        border: none;
+      }
+    }
+  }
+  @media (max-width: 600px){
+    ul{
+      flex-wrap: wrap;
     }
   }
 }

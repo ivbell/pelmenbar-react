@@ -1,0 +1,41 @@
+@import '/src/assets/style/conf';
+
+
+.pb-product{
+  position: relative;
+  &__title{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 40px;
+  }
+
+  &__info-text{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: $accent;
+    font-weight: bold;
+  }
+
+  &__weight{
+    font-size: 20px;
+
+    &-0{
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  &__price{
+    font-size: 26px;
+  }
+
+  &__right-side{
+    text-align: right;
+  }
+}
