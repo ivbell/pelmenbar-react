@@ -1,41 +1,55 @@
 import React from 'react'
-import './MenuTopComponent.scss'
 import { NavLink } from 'react-router-dom'
-import { CityBlock } from '../../common/city-block/CityBlock'
+import './MenuTopComponent.scss'
 
 const MenuTopComponent = () => {
-  return (
-    <div className="menu-top">
-      <div className="container">
-        <div className="menu-top-box d-flex jc-sb pt-5px pb-5px">
-          <div className="left-side">
-            <div className="logo-menu d-flex">
-              <NavLink to="/"><img src="/images/logo.png" alt=""/> </NavLink>
-              <div>
-                <ul className="logo-menu-first d-flex">
-                  <li>
-                    <NavLink to="/delivery">Доставка</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/about">О нас</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/contacts">Контакты</NavLink>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="right-side d-flex">
-            <CityBlock/>
-            <div className="contact-block">
-              <a href="tel:+79126718125" target="_blank" rel="noreferrer">+7 (912) 671‒81‒25</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+	return (
+		<div className='menu-top'>
+			<div className='background_color-red'></div>
+			<div className='background_color-white'></div>
+			<div className='container'>
+				<div className='menu-top-box d-flex jc-sb'>
+					<div className='left-side'>
+						<div className='left-side__logo'>
+							<NavLink to='/'>
+								<img src='/images/logo/happylmen-logo__white-back.svg' alt='' />
+							</NavLink>
+						</div>
+						<div className='left-side__list'>
+							<ul>
+								<li>
+									<NavLink to='/catalog'>Каталог</NavLink>
+								</li>
+								<li>
+									<NavLink to='/delivery'>Доставка</NavLink>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div className='right-side'>
+						<div className='right-side__list'>
+							<ul>
+								<li>
+									<NavLink to='/bar'>Где поесть</NavLink>
+								</li>
+								<li>
+									<NavLink to='/menu'>Меню</NavLink>
+								</li>
+							</ul>
+						</div>
+						<div className='right-side__logo'>
+							<NavLink to='/bar'>
+								<img
+									src='/images/logo/PelmenBar-logo__background-red.svg'
+									alt=''
+								/>
+							</NavLink>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
 }
 
 export default MenuTopComponent

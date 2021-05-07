@@ -3,7 +3,6 @@ import { observer } from 'mobx-react-lite'
 import React, { useState } from 'react'
 import { useHttp } from '../../hooks/http.hooks'
 import products from '../../store/products'
-import { Redirect } from 'react-router-dom'
 import './FullCartComponent.scss'
 
 export const FullCartComponent = observer(() => {

@@ -5,17 +5,19 @@
   align-items: center;
   align-content: center;
   position: relative;
-  padding-right: 120px;
+  margin-right: $gutter;
+  margin-bottom: $gutter/2;
 
   svg {
     width: 24px;
     color: $accent;
+    position: absolute;
+    top: 0;
+    left: -24px;
   }
 
   span {
     border-bottom: 1px dashed $textcolor;
-    position: absolute;
-    top: 0;
     @media (max-width: 1000px) {
       position: relative;
     }

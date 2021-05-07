@@ -19,11 +19,11 @@ export const MobileHandleMenu = observer(() => {
 
 	return (
 		<div className='full-catalog-block'>
-			<div className='mobile-logo-menu-top'>
+			{/* <div className='mobile-logo-menu-top'>
 				<NavLink to='/'>
 					<img src='/images/logo.png' alt='' />
 				</NavLink>
-			</div>
+			</div> */}
 			<span
 				onClick={() => MenuHandler.toggleMenu()}
 				className='full-catalog-block-close'>
@@ -41,7 +41,10 @@ export const MobileHandleMenu = observer(() => {
 						<NavLink to='/'>Главная страница</NavLink>
 					</li>
 					<li>
-						<NavLink to='/catalog'>Меню</NavLink>
+						<NavLink to='/catalog'>Каталог ХЭППИЛЬМЕНЕЙ</NavLink>
+					</li>
+					<li>
+						<NavLink to='/menu'>Меню Pelmen Bar</NavLink>
 					</li>
 					<li>
 						<NavLink to='/bar'>Бар</NavLink>
@@ -54,6 +57,9 @@ export const MobileHandleMenu = observer(() => {
 					</li>
 					<li>
 						<NavLink to='/contacts'>Контакты</NavLink>
+					</li>
+					<li>
+						<NavLink to='/get-pelmenbar'>Франшиза</NavLink>
 					</li>
 				</ul>
 			</div>
