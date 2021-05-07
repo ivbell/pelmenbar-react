@@ -8,8 +8,8 @@
   border-radius: 100%;
   text-align: center;
   position: fixed;
-  right: 100px;
-  bottom: 200px;
+  right: 10%;
+  bottom: 100px;
   cursor: pointer;
   align-items: center;
   align-content: center;
@@ -22,5 +22,9 @@
     position: absolute;
     font-size: 18px;
     left: 25px;
+  }
+
+  @media (max-width: 1000px){
+    display: none;
   }
 }
