@@ -1,0 +1,26 @@
+@import './src/assets/style/conf';
+
+.cart-fixed-component{
+  width: 60px;
+  height: 60px;
+  background-color: $accent;
+  color: #fff;
+  border-radius: 100%;
+  text-align: center;
+  position: fixed;
+  right: 100px;
+  bottom: 200px;
+  cursor: pointer;
+  align-items: center;
+  align-content: center;
+  svg{
+    margin-top: 17px;
+    width: 30px;
+    height: 30px;
+  }
+  span{
+    position: absolute;
+    font-size: 18px;
+    left: 25px;
+  }
+}

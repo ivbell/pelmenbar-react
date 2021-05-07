@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './App.scss'
+import { CartFixedComponent } from './components/common/cart-count/CartFixedComponent'
 import Footer from './components/common/footer/Footer'
 import Navbar from './components/common/navbar/Navbar'
 import { useRoutes } from './routes'
@@ -17,6 +18,7 @@ function App() {
 			<div className='all'>
 				<Navbar />
 				<div className='App'>{routes}</div>
+				<CartFixedComponent />
 				<Footer />
 			</div>
 		</Router>
