@@ -1,32 +1,74 @@
 @import './src/assets/style/conf';
 
 .footer-block {
-  padding-bottom: $gutter;
-  text-align: center;
+	padding-bottom: $gutter;
+	text-align: center;
 
-  a {
-    margin-right: 10px;
-    transition: $transition;
-    &:last-child {
-      margin-right: 0;
-    }
+	a {
+		margin-right: 10px;
+		transition: $transition;
+		&:last-child {
+			margin-right: 0;
+		}
 
-    &:hover{
-      svg{
-        fill: $accent;
-      }
-    }
-  }
+		&:hover {
+			svg {
+				fill: $accent;
+			}
+		}
+	}
 
-  .container {
-    position: relative;
-  }
+	.container {
+		position: relative;
+	}
 
-  .razr{
-    display: none;
-  }
+	.razr {
+		display: none;
+	}
 
-  @media (max-width: 1000px) {
-    margin-bottom: 50px;
-  }
+	@media (max-width: 1000px) {
+		margin-bottom: 50px;
+	}
+}
+
+.footer-block {
+	&__menu {
+		margin-bottom: $gutter/2;
+		&-first {
+			justify-content: center;
+			li {
+				display: inline-block;
+				padding-left: $gutter/3;
+
+				a {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		@media (max-width: 1000px) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__contacts {
+		justify-content: center;
+		@media (max-width: 1000px) {
+			margin-bottom: $gutter/2;
+			.city-block {
+				display: none;
+			}
+		}
+	}
+}
+
+.contact-block {
+	padding-left: $gutter/2;
+	padding-right: 5px;
+	@media (max-width: 1000px) {
+		padding-top: 25px;
+		padding-right: 5px;
+	}
 }

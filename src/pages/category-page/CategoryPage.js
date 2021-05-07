@@ -10,7 +10,7 @@ export const CategoryPage = observer(() => {
   let categoriesProductList = []
   const categoryName = useParams().name
 
-  products.categories.map((item) => {
+  products.categoriesPelmenBar.map((item) => {
     if (item.name === categoryName) {
       categoriesList = item.name
       categoryId = item._id

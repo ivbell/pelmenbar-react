@@ -3,7 +3,7 @@ import { makeAutoObservable, runInAction } from 'mobx'
 class Products {
 
   products = []
-  categories = []
+  categoriesPelmenBar = []
   cart = []
   paymentCart = []
 
@@ -26,7 +26,7 @@ class Products {
       .then(response => response.json())
       .then(json => {
         runInAction(() => {
-          this.categories = json
+          this.categoriesPelmenBar = json
         })
       })
   }
