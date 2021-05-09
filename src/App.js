@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import './App.scss'
 import { CartFixedComponent } from './components/common/cart-count/CartFixedComponent'
 import Footer from './components/common/footer/Footer'
@@ -20,6 +22,7 @@ function App() {
 				<div className='App'>{routes}</div>
 				<CartFixedComponent />
 				<Footer />
+				<ToastContainer position='bottom-right' />
 			</div>
 		</Router>
 	)
