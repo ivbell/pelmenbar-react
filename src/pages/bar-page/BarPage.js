@@ -1,21 +1,24 @@
 import React from 'react'
-import { MagazineMapComponent } from '../../components/common/map/MagazineMapComponent'
-import 'slick-carousel/slick/slick.scss'
-import 'slick-carousel/slick/slick-theme.scss'
-import Slider from 'react-slick'
-import './BarPage.scss'
+import ImageGallery from 'react-image-gallery'
 import { MenuBarComponent } from '../../components/bar-page/MenuBarComponent'
+import { MagazineMapComponent } from '../../components/common/map/MagazineMapComponent'
+import './BarPage.scss'
 
 export const BarPage = () => {
-	const settings = {
-		dots: true,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		lazyLoad: BarPage,
-		arrows: false,
-	}
+	const images = [
+		{
+			original: '/images/bar/1.jpg',
+			thumbnail: '/images/bar/1.jpg',
+		},
+		{
+			original: '/images/bar/2.jpg',
+			thumbnail: '/images/bar/2.jpg',
+		},
+		{
+			original: '/images/bar/3.jpg',
+			thumbnail: '/images/bar/3.jpg',
+		},
+	]
 
 	const menuItem = [
 		{ src: '/images/bar/menu/1.jpg', title: 'Основное меню' },
@@ -28,6 +31,7 @@ export const BarPage = () => {
 			<MenuBarComponent item={item} />
 		</div>
 	))
+
 	return (
 		<div className='container'>
 			<div className='bar-page'>
@@ -38,22 +42,7 @@ export const BarPage = () => {
 					которая не пропускает воду и масло
 				</p>
 			</div>
-
-			<Slider {...settings}>
-				<div className='slide-items'>
-					<img src='/images/bar/1.jpg' alt='' />
-				</div>
-				<div>
-					<img src='/images/bar/2.jpg' alt='' />
-				</div>
-				<div>
-					<img src='/images/bar/3.jpg' alt='' />
-				</div>
-				<div>
-					<img src='/images/bar/4.jpg' alt='' />
-				</div>
-			</Slider>
-
+			<ImageGallery items={images} showPlayButton={false} />
 			<div className='menu'>
 				<h2>Меню:</h2>
 				<div className='menu-box'>{listMenu}</div>

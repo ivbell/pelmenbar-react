@@ -1,18 +1,28 @@
 import React from 'react'
-import { MenuListComponent } from '../../components/navbar/menu-catalog/menu-center/menu-list/MenuListComponent'
-import products from '../../store/products'
-import { ProductListPBComponent } from './../../components/menu-PB/product-list-PB/ProductListPBComponent'
+import { ProductTitleComponent } from '../../components/products/product-title/ProductTitleComponent'
+import ImageGallery from 'react-image-gallery'
 import './BarMenuPage.scss'
 
-
 export const BarMenuPage = () => {
-	const productsList = products.productsPB
-
+	const images = [
+		{
+			original: '/images/bar/menu/1.jpg',
+			thumbnail: '/images/bar/menu/1.jpg',
+		},
+		{
+			original: '/images/bar/menu/2.jpg',
+			thumbnail: '/images/bar/menu/2.jpg',
+		},
+		{
+			original: '/images/bar/menu/3.jpg',
+			thumbnail: '/images/bar/menu/3.jpg',
+		},
+	]
 	return (
 		<div>
-			<MenuListComponent slug='menu' lists={products.categoriesPB} />
 			<div className='container'>
-				<ProductListPBComponent title='Меню Pelmen Bar' products={productsList} />
+				<ProductTitleComponent title='Меню Pelmen Bar' />
+				<ImageGallery items={images} showPlayButton={false} />
 			</div>
 		</div>
 	)
