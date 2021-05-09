@@ -1,3 +1,7 @@
 .App{
   min-height: 75vh;
+
+  @media (max-width: 414px){
+    min-height: 55vh;
+  }
 }

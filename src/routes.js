@@ -11,7 +11,6 @@ import { ContactsPage } from './pages/contacts-page/ContactsPage'
 import DeliveryPage from './pages/delivery-page/DeliveryPage'
 import { GetPelmenbarPage } from './pages/get-pelmenbar-page/GetPelmenbarPage'
 import { HomePage } from './pages/home-page/HomePage'
-import { MenuPBPage } from './pages/menu-PB-page/MenuPBPage';
 
 export const useRoutes = () => {
 	return (
@@ -45,9 +44,6 @@ export const useRoutes = () => {
 			</Route>
 			<Route path='/menu' exact>
 				<BarMenuPage />
-			</Route>
-			<Route path='/menu/:name' exact>
-				<MenuPBPage />
 			</Route>
 
 			<Route path='/error' exact>
