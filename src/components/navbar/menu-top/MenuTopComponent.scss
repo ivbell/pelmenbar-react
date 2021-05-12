@@ -11,7 +11,7 @@
 		position: absolute;
 		width: 50%;
 		height: 100px;
-		background-color: $accent;
+		background-color: #fff;
 		right: 0;
 		z-index: 1;
 	}
@@ -41,11 +41,8 @@
 			img {
 				width: 300px;
 			}
-			a {
-				border-bottom: none;
-				&.active {
-					border-bottom: none !important;
-				}
+			a:hover, a.active{
+				border-bottom: none!important;
 			}
 		}
 		ul {
@@ -53,18 +50,17 @@
 		}
 		li {
 			margin-left: $gutter;
-			color: #fff;
+			color: $accent;
 		}
 		a {
 			transition: $transition;
-			border: 1px solid $accent;
 
 			&:hover {
-				border-bottom: 1px solid #fff;
+				border-bottom: 1px solid $accent;
 			}
 
 			&.active {
-				border-bottom: 1px solid #fff;
+				border-bottom: 1px solid $accent;
 			}
 		}
 	}
@@ -180,10 +176,17 @@
 				margin-top: 89px;
 				display: flex;
 				justify-content: center;
+				background-color: $accent;
 			}
 
 			li:first-child {
 				margin-left: 0;
+			}
+			li{
+				color: #fff;
+			}
+			a.active{
+				border-bottom: 1px solid #fff;
 			}
 		}
 
